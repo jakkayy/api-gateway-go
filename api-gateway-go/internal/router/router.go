@@ -29,6 +29,7 @@ func NewRouter(cfg config.Config, logg *logger.Logger) http.Handler {
 			middleware.Recovery(),
 			middleware.Logging(logg),
 			middleware.RateLimit(),
+			middleware.Auth(),
 		)(p)
 
 		mux.Handle(r.Path, handler)
