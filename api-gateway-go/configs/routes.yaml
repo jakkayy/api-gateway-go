@@ -1,0 +1,9 @@
+routes:
+  - path: /users
+    targets:
+      - http://localhost:8001
+      - http://localhost:8003
+
+  - path: /orders
+    targets:
+      - http://localhost:8002
